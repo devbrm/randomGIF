@@ -20,8 +20,10 @@ function createImages(urls) {
   imageContainer.innerHTML = ``
   urls.forEach( url => {
     const image = document.createElement("img")
+    const div = document.createElement("div")
     image.src = url
-    imageContainer.appendChild(image)
+    div.appendChild(image)
+    imageContainer.appendChild(div)
   } )
   return
 }
