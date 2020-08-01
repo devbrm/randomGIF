@@ -1,6 +1,5 @@
 
-function fetchItems(gifyURL, old) {
-  if(gifyURL === old) return ;
+function fetchItems(gifyURL) {
   input.classList.add("bg")
   let imagesURL = []
 
@@ -34,8 +33,7 @@ function setURL() {
   let word = input.value.match(regex)[0]
   input.value = word
   let url = `https://api.giphy.com/v1/gifs/search?api_key=2gfW31dhsPscd6K1Ny1w5c6KLOxOSRvP&q=${word}&limit=${range.valueAsNumber}&offset=0&rating=g&lang=en`
-  fetchItems(url, fetchedURL)
-  fetchedURL = url
+  fetchItems(url)
 
 }
 
