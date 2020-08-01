@@ -19,12 +19,21 @@ function createImages(urls) {
   imageContainer.innerHTML = ``
   urls.forEach( url => {
     const image = document.createElement("img")
+    setBG(image)
     const div = document.createElement("div")
     image.src = url
     div.appendChild(image)
     imageContainer.appendChild(div)
   } )
   return
+}
+
+function setBG(item) {
+  let num365 = Math.floor(Math.random() * 361)
+  let num100 = Math.floor(Math.random() * 101)
+  let color = `linear-gradient(45deg, hsl(${num365}deg, ${num100 + 12}%, ${num100 - 10}%), hsl(${num365}deg, ${num100 - 12}%, ${num100 + 10}%) )`
+  console.log(item.style.background);
+  item.style.background = color
 }
 
 function setURL() {
@@ -34,7 +43,6 @@ function setURL() {
   input.value = word
   let url = `https://api.giphy.com/v1/gifs/search?api_key=2gfW31dhsPscd6K1Ny1w5c6KLOxOSRvP&q=${word}&limit=${range.valueAsNumber}&offset=0&rating=g&lang=en`
   fetchItems(url)
-
 }
 
 function changeRange() {
