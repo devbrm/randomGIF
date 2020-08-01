@@ -1,0 +1,109 @@
+
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway";
+  overflow-x: hidden;
+}
+
+header {
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: hotpink;
+}
+
+main {
+  padding: 1rem;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: stretch;
+  overflow-x: hidden;
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 400px;
+  align-self: start;
+  justify-self: center ;
+  padding: 2rem;
+}
+
+.inputContainer input {
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  height: 4rem;
+  width: 100%;
+  min-width: 200px;
+  background: linear-gradient(90deg, #000, rgb(255, 255, 255));
+  background-size: 10000%;
+  background-position: right;
+  transition: .3s ease-out; 
+  transition-property: background-position;
+}
+
+.inputContainer input, .inputContainer .count {
+  opacity: .8;
+}
+
+.inputContainer input:hover, .inputContainer .count:hover {
+  opacity: 1;
+}
+
+.inputContainer div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.inputContainer [type="range"] {
+  width: 80%;
+  display: inline;
+}
+
+
+.inputContainer .count {
+  padding: 1rem;
+  display: inline;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+.imagesContainer {
+  width: 100%;
+  margin-top: 2rem;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  overflow-x: hidden;
+}
+
+.imagesContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+input.bg {
+  background-position: left;
+}
